@@ -1,0 +1,186 @@
+@import url("https://fonts.google.com/specimen/Inter");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  height: 100%;
+}
+#root {
+  height: 100%;
+}
+body {
+  height: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  background-color: hsl(233, 47%, 7%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+@media (min-width: 375px) {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin: 96px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(244, 38%, 16%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 8px;
+    height: 100%;
+    justify-content: center;
+  }
+
+  section .content {
+    flex: 1;
+    order: 2;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: 0 0 8px 8px;
+  }
+  section span {
+    color: hsl(277, 64%, 61%);
+  }
+
+  section .content .header h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 32px;
+    padding: 36px 16px;
+  }
+
+  section .content .header p {
+    color: hsla(0, 0%, 100%, 0.75);
+    padding: 0 40px;
+  }
+
+  section .content .stats {
+    display: flex;
+    flex-direction: column;
+    color: hsla(0, 0%, 100%, 0.6);
+    padding: 32px 0;
+    gap: 36px 0;
+  }
+
+  section .content .stats h3 {
+    color: hsl(0, 0%, 100%);
+    font-size: 20px;
+  }
+  section .content .stats p {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  section .img {
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 100px;
+    flex-shrink: 0;
+    background-image: url(./images//image-header-mobile.jpg);
+    background-size: cover;
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: overlay;
+    border-radius: 8px 8px 0 0;
+    object-fit: fill;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 80%;
+    text-align: initial;
+  }
+
+  section {
+    flex-direction: row;
+    background-color: hsl(244, 38%, 16%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 8px 0 0 8px;
+    height: auto;
+  }
+
+  section .content {
+    flex: 1;
+    order: 0;
+    border-radius: 8px 0 0 8px;
+  }
+  section .img {
+    order: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    background-image: url(./images//image-header-desktop.jpg);
+    background-size: cover;
+    background-color: hsl(277, 64%, 61%);
+    background-blend-mode: overlay;
+    border-radius: 0 8px 8px 0;
+  }
+  section span {
+    color: hsl(277, 64%, 61%);
+  }
+
+  section .content .stats {
+    flex-direction: row;
+    color: hsla(0, 0%, 100%, 0.6);
+    padding: 32px 0;
+    gap: 0 72px;
+  }
+  section .content .header {
+    padding: 48px 60px 48px 32px;
+  }
+
+  section .content .header h1 {
+    color: hsl(0, 0%, 100%);
+    padding-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 16px;
+    font-size: 40px;
+  }
+
+  section .content .header p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 16px;
+    padding: 0;
+  }
+
+  section .content .stats h3 {
+    color: hsl(0, 0%, 100%);
+    padding-bottom: 8px;
+    font-size: 32px;
+  }
+  section .content .stats p {
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
